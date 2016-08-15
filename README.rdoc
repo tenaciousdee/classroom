@@ -1,4 +1,4 @@
-# Classroom App
+== Classroom App
 
 This sample rails app was set up to get familiar with a typical Git workflow.
 
