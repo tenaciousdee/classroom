@@ -1,0 +1,20 @@
+<h1>Edit Teacher</h1>
+
+<%= form_tag '/teachers', method: :patch do %>
+
+<div>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @teacher.name %>
+</div>
+
+<div>
+  <%= label_tag :bio %>
+  <%= text_field_tag :bio, @teacher.bio %>
+</div>
+
+<div>
+  <%= label_tag :certifications %>
+  <%= text_field_tag :certifications, @teacher.certifications %>
+</div>
+
+<% end %>
