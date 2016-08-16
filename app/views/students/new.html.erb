@@ -1,0 +1,24 @@
+<h2>Add a new student</h2>
+
+<%= form_tag '/students', method: :post do %>
+
+  <div>
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @student.name %>
+  </div>
+
+  <div>
+    <%= label_tag :grade %>
+    <%= text_field_tag :grade, @student.grade %>
+  </div>
+
+  <div>
+    <%= label_tag :teacher_id %>
+    <%= text_field_tag :teacher_id, @student.teacher_id %>
+  </div>
+
+  <div>
+    <%= submit_tag 'PUNCH IT!!!!' %>
+  </div>
+
+<% end %>
