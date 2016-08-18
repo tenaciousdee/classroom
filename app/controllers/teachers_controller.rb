@@ -35,8 +35,4 @@ class TeachersController < ApplicationController
     flash[:warning] = "Teacher destroyed"
   end
 
-  def test
-    test
-  end
-
 end
