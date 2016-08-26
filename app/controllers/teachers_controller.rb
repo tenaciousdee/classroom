@@ -12,12 +12,14 @@ class TeachersController < ApplicationController
   end
 
   def create
-    @teacher = Teacher.new(
+    @teacher = Teacher.create(
     name: params[:name],
     bio: params[:bio],
     certifications: params[:certifications]
     )
-    flash[:success] = "Teacher Created"
+
+    flash[:success] = "Teacher Added"
+    redirect_to "/" 
   end
 
   def edit
@@ -26,6 +28,14 @@ class TeachersController < ApplicationController
 
   def update
     @teacher = Teacher.find_by(id: params[:id])
+
+    @teacher.update(
+      name: params[:name],
+      bio: params[:bio],
+      certifications: params[:certifications]
+      )
+
+   render 'show.html.erb'
   end
 
   def destroy
